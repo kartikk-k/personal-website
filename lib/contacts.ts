@@ -5,42 +5,35 @@ export const getContacts = function (): ContactItemProps[] {
     {
       title: 'GitHub',
       link: {
-        display: '@yashsehgal',
-        url: 'https://github.com/yashsehgal',
+        display: '@kartikk-k',
+        url: 'https://github.com/kartikk-k',
       },
     },
     {
       title: 'Twitter',
       link: {
-        display: '@yashsehgaldev',
-        url: 'https://twitter.com/yashsehgaldev',
+        display: '@kartik_builds',
+        url: 'https://twitter.com/kartik_builds',
       },
     },
     {
       title: 'LinkedIn',
       link: {
-        display: 'linkedin.com/in/sehgalyash',
-        url: 'https://linkedin.com/in/sehgalyash',
+        display: '@kartik-khorwal',
+        url: 'https://linkedin.com/in/kartik-khorwal',
       },
     },
     {
-      title: 'Instagram',
+      title: 'Dribble',
       link: {
-        display: '@sehgalyash_',
-        url: 'https://instagram.com/sehgalyash_',
-      },
-    },
-    {
-      title: 'Schedule a meeting',
-      link: {
-        display: 'cal.com/yashsehgal',
-        url: 'https://cal.com/yashsehgal',
+        display: '@kartikk12',
+        url: 'https://dribbble.com/kartikk12',
       },
     },
     {
       title: 'Resume',
       link: {
-        display: 'yashsehgal.com/resume',
+        display: 'kartikkhorwal.com/resume',
         url: '/resume',
       },
     },

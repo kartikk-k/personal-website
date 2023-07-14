@@ -9,9 +9,9 @@ const ResumeView: React.FunctionComponent = () => {
   return (
     <>
       <MetaHead
-        title={'Resume | Yash Sehgal'}
+        title={'Resume | Kartik Khorwal'}
         description={
-          'Checkout resume of Yash Sehgal. On Google Drive or Download as a PDF'
+          'Checkout resume of Kartik Khorwal. On Google Drive or Download as a PDF'
         }
         embedSource={{
           twitter:
@@ -28,7 +28,12 @@ const ResumeView: React.FunctionComponent = () => {
             width={'360'}
             height={'200'}
             alt={'resume-cover'}
-            className={'resume-cover rounded-md border shadow-lg mx-auto'}
+            className={'resume-cover rounded-md border-2 cursor-pointer shadow-lg mx-auto'}
+            onClick={() =>
+              window.open(
+                'https://drive.google.com/file/d/1yJbgnRAMaJGrZ5sDpp48kF9sUkeFRu-Q/view',
+              )
+            }
             priority
           />
           <Section
@@ -38,13 +43,13 @@ const ResumeView: React.FunctionComponent = () => {
             <Button
               onClick={() =>
                 window.open(
-                  'https://drive.google.com/file/d/1PVlJ1Z9XfBK7vWPp3LBejbgG3KFEYUjE/view?usp=share_link',
+                  'https://drive.google.com/file/d/1yJbgnRAMaJGrZ5sDpp48kF9sUkeFRu-Q/view',
                 )
               }>
               {'Resume on Drive'}
             </Button>
             <Button
-              onClick={() => (window.location.href = '/utils/resume.pdf')}>
+              onClick={() => (window.open('/utils/resume.pdf', '_blank'))}>
               {'Resume as PDF'}
             </Button>
           </Section>

@@ -17,9 +17,9 @@ interface ProjectItemProps extends React.HTMLAttributes<HTMLDivElement> {
   description?: string[];
   tech?: string[];
   category?: Array<
-    'design' | 'community' | 'accessibilty' | 'ui/ux' | 'design-system'
+    'design' | 'community' | 'accessibilty' | 'ui/ux' | 'design-system' | 'frontend' | 'backend' | 'fullstack' | 'mobile' | 'web' | 'desktop' | 'opensource' | 'game' | 'tool' | 'utility' | 'library' | 'framework' | 'api' | 'cli' | 'bot' | 'automation' | 'database' | 'server' | 'cloud' | 'devops' | 'security' | 'testing' | 'analytics' | 'seo' | 'marketing' | 'productivity' | 'finance' | 'education' | 'health' | 'entertainment' | 'social' | 'news' | 'shopping' | 'food' | 'travel' | 'lifestyle' | 'other'
   >;
-  status?: 'Ongoing' | 'Open Source' | 'Maintained';
+  status?: 'Ongoing' | 'Open Source' | 'Maintained' | 'Archived';
 }
 
 const ProjectSection: React.FunctionComponent = () => {
@@ -54,7 +54,7 @@ const ProjectItem: React.FunctionComponent<ProjectItemProps> = ({
   const parseProjectStatus = ({
     status = 'Maintained',
   }: {
-    status: 'Ongoing' | 'Open Source' | 'Maintained';
+    status: 'Ongoing' | 'Open Source' | 'Maintained' | 'Archived';
   }): string => {
     switch (status) {
       case 'Ongoing':
@@ -63,6 +63,8 @@ const ProjectItem: React.FunctionComponent<ProjectItemProps> = ({
         return '✨ Open Source';
       case 'Maintained':
         return '👍🏽 Maintained';
+        case 'Archived':
+        return '📥 Archived';
       default:
         return '';
     }
@@ -144,7 +146,7 @@ const ProjectItem: React.FunctionComponent<ProjectItemProps> = ({
           </span>
           {/* <div className="project-tech-list-wrapper mt-2 flex flex-row items-center justify-start">
                 {tech?.map((techItem: string, techIndex: number) => (
-                    <p className='text- font-normal mr-1 text-gray-500' key={techIndex}>{tech.length - 1 === techIndex ? techItem : (techItem + ", ")}</p>
+                    <p className='text-xs font-normal mr-1 text-gray-500' key={techIndex}>{tech.length - 1 === techIndex ? techItem : (techItem + ", ")}</p>
                 ))}
             </div> */}
         </div>

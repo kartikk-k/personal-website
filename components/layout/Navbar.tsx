@@ -19,7 +19,7 @@ const Navbar: React.FunctionComponent = () => {
   return (
     <nav className="navbar mt-12">
       <ViewContainer>
-        <ul className="navbar-options-list flex flex-row items-center justify-end gap-2">
+        <ul className="navbar-options-list flex flex-row items-center justify-end gap-4">
           {getPathMap()?.map(
             (pathMapItem: PathMapProps, pathMapIndex: number) => {
               if (pathMapItem?.isAvailable) {

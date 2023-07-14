@@ -19,6 +19,6 @@ export const getPathMap = function (): PathMapProps[] {
       title: 'crafts',
       link: '/crafts',
       isAvailable: true,
-    },
+    }
   ];
 };

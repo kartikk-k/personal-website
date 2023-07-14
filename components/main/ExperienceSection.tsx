@@ -81,7 +81,7 @@ const ExperienceItem: React.FunctionComponent<ExperienceItemProps> = ({
             experienceStatus}
           {typeof experienceStatus === 'object' && (
             <span className="experience-status-duration-wrapper">
-              {experienceStatus?.startAt + '-' + experienceStatus?.endAt}
+              {experienceStatus?.startAt + ' - ' + experienceStatus?.endAt}
             </span>
           )}
         </p>

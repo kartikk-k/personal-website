@@ -13,8 +13,8 @@ interface MetaHeadProps extends React.MetaHTMLAttributes<HTMLMetaElement> {
 }
 
 const MetaHead: React.FunctionComponent<MetaHeadProps> = ({
-  title = 'Yash Sehgal',
-  description = 'Hey! I am an engineer (designer, most of the times), learning how to build and design scalable websites and applications.',
+  title = 'Kartik Khorwal',
+  description = 'Hey! I am an developer building web apps with stunning designs.',
   embedSource = 'default',
   ...attr
 }) => {
@@ -22,18 +22,18 @@ const MetaHead: React.FunctionComponent<MetaHeadProps> = ({
     <Head {...attr}>
       <title>{title}</title>
       <link rel="shortcut icon" href="/media/icon.ico" />
-      <meta name="title" content="Yash Sehgal" />
+      <meta name="title" content="Kartik Khorwal" />
       <meta name="description" content={description} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.yashsehgal.com/" />
+      <meta property="og:url" content="https://www.kartikkhorwal.com/" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
         content={
           embedSource === 'default'
-            ? 'https://ik.imagekit.io/eawrckp8wfi/portfolio-image-source/seo/portfolio?updatedAt=1679493727587&tr=w-1200%2Ch-630%2Cfo-auto'
+            ? 'https://ik.imagekit.io/kartikk/Frame_63.png?updatedAt=1689352124062'
             : embedSource?.og
         }
       />
@@ -42,18 +42,18 @@ const MetaHead: React.FunctionComponent<MetaHeadProps> = ({
         property="twitter:card"
         content={
           embedSource === 'default'
-            ? 'https://ik.imagekit.io/eawrckp8wfi/portfolio-image-source/seo/portfolio?updatedAt=1679493727587&tr=w-1200%2Ch-675%2Cfo-auto'
+            ? 'https://ik.imagekit.io/kartikk/Frame_63.png?updatedAt=1689352124062'
             : embedSource?.twitter
         }
       />
-      <meta property="twitter:url" content="https://www.yashsehgal.com/" />
+      <meta property="twitter:url" content="https://www.kartikkhorwal.com/" />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta
         property="twitter:image"
         content={
           embedSource === 'default'
-            ? 'https://ik.imagekit.io/eawrckp8wfi/portfolio-image-source/seo/portfolio?updatedAt=1679493727587&tr=w-1200%2Ch-675%2Cfo-auto'
+            ? 'https://ik.imagekit.io/kartikk/Frame_63.png?updatedAt=1689352124062'
             : embedSource?.twitter
         }
       />
