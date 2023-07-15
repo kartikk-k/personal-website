@@ -6,7 +6,7 @@ const Callout: React.FunctionComponent<
   return (
     <div
       className={cn(
-        'rounded-lg bg-orange-100 text-zinc-700 text-sm font-normal p-4 leading-6',
+        'rounded-lg bg-gray-200 text-zinc-700 text-sm font-normal p-4 leading-6',
         className,
       )}
       {...attr}>

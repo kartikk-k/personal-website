@@ -30,7 +30,7 @@ const MDXHeader: React.FunctionComponent<MDXHeaderProps> = ({
   return (
     <>
       <MetaHead
-        title={`${craftHeaderData?.header} - Crafts | Yash Sehgal`}
+        title={`${craftHeaderData?.header} - Crafts | Kartik Khorwal`}
         description={craftHeaderData?.description}
         embedSource={{
           twitter:

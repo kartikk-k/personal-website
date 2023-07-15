@@ -20,14 +20,14 @@ const Crafts: React.FunctionComponent = () => {
   return (
     <>
       <MetaHead
-        title={'Crafts | Yash Sehgal'}
-        description={'A Collection of Hand-Crafted Frontend UI Components.'}
+        title={'Crafts | Kartik Khorwal'}
+        description={'A Collection of beatifully designed UI components for frontend.'}
         embedSource={{
           twitter:
-            'https://ik.imagekit.io/eawrckp8wfi/portfolio-image-source/seo/crafts?updatedAt=1679904848893&tr=w-1200%2Ch-675%2Cfo-auto',
+            'https://ik.imagekit.io/kartikk/Frame_63.png?updatedAt=1689352124062',
           linkedin:
-            'https://ik.imagekit.io/eawrckp8wfi/portfolio-image-source/seo/crafts?updatedAt=1679904848893&tr=w-1200%2Ch-628%2Cfo-auto',
-          og: 'https://ik.imagekit.io/eawrckp8wfi/portfolio-image-source/seo/crafts?updatedAt=1679904848893',
+            'https://ik.imagekit.io/kartikk/Frame_63.png?updatedAt=1689352124062',
+          og: 'https://ik.imagekit.io/kartikk/Frame_63.png?updatedAt=1689352124062',
         }}
       />
       <div className="crafts-view-container" id="crafts">
@@ -48,7 +48,7 @@ const Crafts: React.FunctionComponent = () => {
                       <Link
                         href={craft?.craftLink}
                         target={craft?.craftSlug ? '_self' : '_blank'}>
-                        <h3 className="text-lg hover:underline">
+                        <h3 className="text-lg  hover:underline">
                           {craft?.craftTitle}
                         </h3>
                         <p className="text-sm font-normal text-zinc-500">
@@ -63,12 +63,14 @@ const Crafts: React.FunctionComponent = () => {
                       <Link
                         href={`/crafts/${craft?.craftSlug}`}
                         target={craft?.craftSlug ? '_self' : '_blank'}>
-                        <h3 className="text-lg hover:underline">
-                          {craft?.craftTitle}
-                        </h3>
-                        <p className="text-sm font-normal text-zinc-500">
-                          {craft?.craftDescription}
-                        </p>
+                        <div className='border-l-2 pl-4 hover:border-orange-300 transition-all'>
+                          <h3 className="text-lg">
+                            {craft?.craftTitle}
+                          </h3>
+                          <p className="text-sm font-normal text-zinc-500">
+                            {craft?.craftDescription}
+                          </p>
+                        </div>
                       </Link>
                     </li>
                   );

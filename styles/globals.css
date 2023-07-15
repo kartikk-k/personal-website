@@ -12,8 +12,12 @@ body {
 }
 
 .view-container {
-  @apply box-border mx-auto;
-  @apply w-[900px] max-2xl:w-[800px] max-xl:w-[720px] max-lg:w-[640px] max-md:w-[560px] max-sm:w-[340px];
+  @apply box-border mx-auto p-2;
+  @apply w-[900px] max-2xl:w-[800px] max-xl:w-[720px] max-lg:w-[640px] max-md:w-[600px] max-sm:w-[340px];
+}
+
+.code-container {
+  @apply text-sm max-sm:text-xs cursor-text;
 }
 
 .mdx-content > h1,
@@ -36,9 +40,9 @@ body {
   @apply text-zinc-500 my-4 leading-6 text-base max-md:text-sm;
 }
 
-code {
-  @apply text-sm max-sm:text-xs bg-zinc-200 p-1 rounded cursor-default;
-}
+/* code {
+  @apply text-sm max-sm:text-xs bg-zinc-200 p-1 rounded cursor-text;
+} */
 
 pre {
   @apply bg-zinc-200 p-4 rounded-md overflow-x-scroll my-4;
@@ -50,7 +54,7 @@ pre > code {
 }
 
 .component-display-wrapper {
-  @apply flex flex-row items-center justify-center border-2 border-dashed border-zinc-200 p-12 rounded-md;
+  @apply flex flex-row items-center justify-center border-2 overflow-auto border-dashed border-zinc-200 p-12 rounded-md;
 }
 
 .ios-time-slider-component > * {
