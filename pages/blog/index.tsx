@@ -43,6 +43,9 @@ const BlogView: React.FunctionComponent = () => {
               <h2 className="about-heading leading-snug font-medium text-base text-zinc-900">
                 {'blogs.'}
               </h2>
+
+              <p className='mt-8 text-sm text-zinc-700'>No blog posts yet.</p>
+
               <ul className="blogs-list mt-8 grid grid-cols-1 gap-4">
                 {getBlogs()?.map((blog: BlogProps, blogIndex: number) => {
                   if (blog?.link) {
