@@ -40,9 +40,9 @@ body {
   @apply text-zinc-500 my-4 leading-6 text-base max-md:text-sm;
 }
 
-/* code {
+code {
   @apply text-sm max-sm:text-xs bg-zinc-200 p-1 rounded cursor-text;
-} */
+}
 
 pre {
   @apply bg-zinc-200 p-4 rounded-md overflow-x-scroll my-4;

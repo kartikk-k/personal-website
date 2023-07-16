@@ -1,0 +1,168 @@
+import { Toaster } from 'sonner';
+import MDXHeader from '@/components/main/MDXHeader';
+import ViewContainer from '@/components/layout/ViewContainer';
+import Section from '@/components/layout/Section';
+import CraftedButton from '@/components/crafts/CraftedButton';
+import CodeContainer from '@/components/layout/CodeContainer';
+import Toast from '@/components/crafts/Toast/Toast';
+
+<MDXHeader />
+
+<ViewContainer className="mdx-content">
+    <Section className="component-display-wrapper">
+       <Toast />
+    </Section>
+    <Section>
+        # Get started
+
+        To implement this clean looking button component, I have used Typescript, React, TailwindCSS and creativity.
+        To make sure, I have used NextJS to build this project, so the file structuing has been set accordind to that.
+
+        Firsly, create a file `components/CreateToast.tsx`.
+
+         ## Installing Dependencies
+
+        <CodeContainer>
+        ```cmd
+        npm i sonner framer-motion
+        ```
+        </CodeContainer>
+    </Section>
+    <Section>
+        # Creating custom toast component
+
+        Here we are creating notification component and customizing options. Customize styling according to your theme or requirements.
+
+        <CodeContainer>
+        ```tsx
+        const CreateToast = ({
+            heading,
+            message,
+            duration,
+        }: CreateToastProps) => {
+
+    // custom toast component
+        const Toast = (
+            <div className={`overflow-hidden shadow-md text-white relative cursor-default flex flex-col gap-1 bg-orange-500 p-4 rounded-[20px] w-full`}>
+
+                {/* toast heading */}
+                <h1 className="text-base font-semibold select-none">{heading}</h1>
+
+                {/* toast message */}
+                <p className="text-xs select-none">{message}</p>
+
+                {/* animated close button */}
+                <button
+                    onClick={() => toast.dismiss(id)}
+                    className="absolute top-4 right-4 group w-5 flex justify-center">
+
+                    {/* close button strokes */}
+                    <span className="w-[2px] rounded-full h-4 bg-white relative border duration-300 group-hover:rotate-[90deg] rotate-45"></span>
+                    <span className="w-[2px] rounded-full h-4 bg-white absolute top-0 duration-300 group-hover:rotate-[90deg] rotate-[-45deg]"></span>
+                </button>
+
+                {/* duration animated line */}
+                {duration && (
+                    <motion.span
+                        initial={{ width: 0 }}
+                        animate={{ width: '100%' }}
+                        transition={{ duration: duration }}
+                        className={`h-1 w-full bg-white absolute bottom-0 left-0`}
+                    >
+                    </motion.span>
+                )}
+            </div>
+            )
+
+            // creating random id for each toast
+            const id = Math.random() * 1000;
+
+            // optional changes for toast
+            const toastOptions = {
+                id: id,
+                duration: duration ? duration * 1000 : 3000,
+
+                // overriding default toast style
+                style: {
+                    border: 'none',
+                    boxShadow: 'none',
+                    height: 'auto',
+                    padding: 0,
+                    background: 'rgba(249, 115, 22, 0.1)', // stack effect or container background
+                    borderRadius: '20px',
+                },
+            };
+
+            return toast(Toast, toastOptions);
+    }
+        ```
+        </CodeContainer>
+
+    </Section>
+
+    <Section>
+        # Adding Toaster to project
+
+        `<Toaster />` will render all toast notifications when the function is call.
+
+        I am adding this to `_app.tsx` so that it can render toast notification in complete project.
+
+        <CodeContainer>
+        ```tsx
+        import { Toaster } from 'sonner';
+
+        export default function App({ Component, pageProps }: AppProps) {
+        return (
+            <React.Fragment>
+
+                {/* added */}
+                <Toaster />
+
+                <Component {...pageProps} />
+            </React.Fragment>
+        );
+        }
+
+        ```
+        </CodeContainer>
+    </Section>
+
+    <Section>
+        # Creating button to render notification
+
+        Now to call this function let's first import function using `import CreateToast from components\CreateToast` and then use CreateToast to create toast notofication.
+
+        <CodeContainer>
+        ```tsx
+            export default function Home() {
+
+                const Toast = () => {
+
+                    CreateToast({
+                    heading: 'Account created',
+                    message: (
+                        <p>
+                            Account created successfully. Visit developer's website for more info 👉<a href="/" target="_blank" className="underline">here</a>
+                        </p>
+                    ),
+                    duration: 6
+                    })
+                }
+
+                return (
+                    <main>
+                        {/* other jsx code */}
+
+                        <button onClick={() => Toast()} className='bg-orange-500 select-none text-white px-4 py-2 rounded-full hover:bg-orange-500/80 duration-150 flex items-center gap-2'>
+                            Create toast
+                        </button>
+
+                    </main>
+                )
+            }
+
+        ```
+        </CodeContainer>
+    </Section>
+
+</ViewContainer>

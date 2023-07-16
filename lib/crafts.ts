@@ -3,11 +3,11 @@ import { CraftProps } from '@/pages/crafts';
 export const getCrafts = function (): CraftProps[] {
   return [
     {
-      craftTitle: 'Button Component',
+      craftTitle: 'Toast Notification',
       craftDescription:
-        'Beautiful Button Component with Typescript, React and TailwindCSS',
+        'Beautiful animated notification made with sonner, framer-motion & tailwind.',
       linkType: 'internal',
-      craftSlug: 'button-component',
+      craftSlug: 'toast-notification',
     },
   ];
 };
