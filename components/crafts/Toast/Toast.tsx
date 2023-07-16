@@ -9,7 +9,7 @@ export default function Toast() {
       heading: 'Account created',
       message: (
         <p>
-          Account created successfully. Visit developer's website for more info 👉<a href="/" target="_blank" className="underline">here</a>
+          Account created successfully. Visit developer&apos;s website for more info 👉<a href="/" target="_blank" className="underline">here</a>
         </p>
       ),
       duration: 6
