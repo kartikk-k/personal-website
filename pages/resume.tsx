@@ -15,10 +15,10 @@ const ResumeView: React.FunctionComponent = () => {
         }
         embedSource={{
           twitter:
-            'https://ik.imagekit.io/eawrckp8wfi/portfolio-image-source/seo/resume?updatedAt=1679493738907&tr=w-1200%2Ch-675%2Cfo-auto',
+            'https://ik.imagekit.io/kartikk/Frame_63.png?updatedAt=1689352124062',
           linkedin:
-            'https://ik.imagekit.io/eawrckp8wfi/portfolio-image-source/seo/resume?updatedAt=1679493738907&tr=w-1200%2Ch-628%2Cfo-auto',
-          og: 'https://ik.imagekit.io/eawrckp8wfi/portfolio-image-source/seo/resume?updatedAt=1679493738907&tr=w-1200%2Ch-630%2Cfo-auto',
+            'https://ik.imagekit.io/kartikk/Frame_63.png?updatedAt=1689352124062',
+          og: 'https://ik.imagekit.io/kartikk/Frame_63.png?updatedAt=1689352124062',
         }}
       />
       <div className="resume-view-container">
