@@ -13,7 +13,7 @@ const Header: React.FunctionComponent = () => {
         className="profile-icon-wrapper hover:scale-110 duration-300 relative w-fit h-fit"
       >
         <Image
-          src={'/media/profile.jpeg'}
+          src={'/media/profile.png'}
           alt="kartik-profile"
           width={'80'}
           height={'80'}
