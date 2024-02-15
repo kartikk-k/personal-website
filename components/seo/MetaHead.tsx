@@ -4,12 +4,12 @@ interface MetaHeadProps extends React.MetaHTMLAttributes<HTMLMetaElement> {
   title?: string;
   description?: string;
   embedSource?:
-    | 'default'
-    | {
-        twitter?: string;
-        linkedin?: string;
-        og?: string;
-      };
+  | 'default'
+  | {
+    twitter?: string;
+    linkedin?: string;
+    og?: string;
+  };
 }
 
 const MetaHead: React.FunctionComponent<MetaHeadProps> = ({
@@ -21,6 +21,17 @@ const MetaHead: React.FunctionComponent<MetaHeadProps> = ({
   return (
     <Head {...attr}>
       <title>{title}</title>
+      {/* Google tag (gtag.js) */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFGYBQVYSK"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        {/* @ts-ignore */}
+        function gtag(){dataLayer.push(arguments)}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LFGYBQVYSK');
+      </script>
+
       <link rel="shortcut icon" href="/media/icon.ico" />
       <meta name="title" content="Kartik Khorwal" />
       <meta name="description" content={description} />
