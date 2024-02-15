@@ -21,16 +21,7 @@ const MetaHead: React.FunctionComponent<MetaHeadProps> = ({
   return (
     <Head {...attr}>
       <title>{title}</title>
-      {/* Google tag (gtag.js) */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFGYBQVYSK"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        {/* @ts-ignore */}
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LFGYBQVYSK');
-      </script>
 
       <link rel="shortcut icon" href="/media/icon.ico" />
       <meta name="title" content="Kartik Khorwal" />
